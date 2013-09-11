@@ -11,6 +11,6 @@
 <p>
   <label><%=l :'traceability.intermediate_tracker' %></label>
   <%= select_tag 'settings[tracker2]',
-                 '<option></option>' +
+                 content_tag(:option,'',:value=>"") +
                  options_from_collection_for_select(Tracker.all, :id, :name, @settings['tracker2'].to_i) %>
 </p>
